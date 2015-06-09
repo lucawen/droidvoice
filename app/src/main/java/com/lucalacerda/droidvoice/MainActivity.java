@@ -10,7 +10,6 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
     protected EditText textVoice;
-    TextToVoice textToVoice;
     ImageButton buttonListen;
     ImageButton buttonDownload;
 
@@ -26,7 +25,7 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
 
                 if (!TextUtils.isEmpty(textVoice.getText().toString())) {
-                    textToVoice = new TextToVoice(textVoice.getText().toString());
+                    TextToVoice textToVoice = new TextToVoice(textVoice.getText().toString());
                     textToVoice.listenVoice();
                 } else {
                     textNull();
